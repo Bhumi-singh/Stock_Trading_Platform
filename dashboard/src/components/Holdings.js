@@ -11,7 +11,7 @@ const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3002/allHoldings", {
+    axios.get("https://stock-trading-platform-r8t9.onrender.com/allHoldings", {
     headers: {
     Authorization: `Bearer ${localStorage.getItem("token")}`, // Shows the token to the bouncer!
      },

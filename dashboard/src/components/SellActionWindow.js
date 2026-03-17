@@ -16,7 +16,7 @@ const SellActionWindow = ({ uid }) => {
     e.preventDefault(); 
     
     axios.post(
-      "http://localhost:3002/newOrder", // 1. The URL
+      "https://stock-trading-platform-r8t9.onrender.com/newOrder", // 1. The URL
       {
         // 2. The Data (Body)
         name: uid,
