@@ -170,7 +170,7 @@ app.post("/signup", async (req, res) => {
       expiresIn: "3d", // Token expires in 3 days
     });
 
-    res.status(201).json({ message: "User created successfully", success: true, token });
+    return res.status(201).json({ message: "User created successfully", success: true, token });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Internal server error" });
