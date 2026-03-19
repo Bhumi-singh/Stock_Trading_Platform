@@ -145,17 +145,7 @@ app.get("/allOrders", userVerification, async (req, res) => {
   }
 });
 
-// Route to delete a specific order by its ID
-app.delete("/deleteOrder/:id", userVerification, async (req, res) => {
-  try {
-    const { id } = req.params;
-    await OrdersModel.findByIdAndDelete(id);
-    return res.status(200).json({ message: "Order deleted successfully", success: true });
-  } catch (error) {
-    console.error("Delete Error:", error);
-    return res.status(500).json({ message: "Internal server error", error: error.message });
-  }
-});
+
 
 app.post("/signup", async (req, res) => {
   try {
